@@ -39,7 +39,7 @@
 			<&gpio0 31 GPIO_ACTIVE_HIGH>,  /* D7  = P0_31 */
 			<&gpio0 28 GPIO_ACTIVE_HIGH>,  /* D8  = P0_28 */
 			<&gpio0 10 GPIO_ACTIVE_HIGH>,   /* D9  = P0_10 (LED_RED共用) */
-			<&gpio0 27 GPIO_ACTIVE_HIGH>,   /* D10 = P0_27 (LED_GREEN共用, SPI SS) */
+			<&gpio0 27 GPIO_ACTIVE_HIGH>,   /* D10 = P0_27 (LED_GREEN共用, SPI SSはスケッチ側でdigitalWrite()制御) */
 			<&gpio0 24 GPIO_ACTIVE_HIGH>,  /* D11 = P0_24 (SPI MOSI) */
 			<&gpio0 26 GPIO_ACTIVE_HIGH>,  /* D12 = P0_26 (SPI MISO) */
 			<&gpio0 25 GPIO_ACTIVE_HIGH>,  /* D13 = P0_25 (SPI SCK) */
