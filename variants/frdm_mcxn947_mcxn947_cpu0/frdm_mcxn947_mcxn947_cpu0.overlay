@@ -42,12 +42,18 @@
 			<&gpio0 26 GPIO_ACTIVE_HIGH>,  /* D12 = P0_26 (SPI MISO) */
 			<&gpio0 25 GPIO_ACTIVE_HIGH>,  /* D13 = P0_25 (SPI SCK) */
 			<&gpio0 23 GPIO_ACTIVE_HIGH>,  /* D14 = P0_23 (SW2, ARD_A5と共用) */
-			<&gpio0 6  GPIO_ACTIVE_HIGH>;  /* D15 = P0_6  (SW3) */
+			<&gpio0 6  GPIO_ACTIVE_HIGH>,  /* D15 = P0_6  (SW3) */
+			<&gpio0 14 GPIO_ACTIVE_HIGH>,  /* D16 = P0_14 (A2) */
+			<&gpio0 22 GPIO_ACTIVE_HIGH>,  /* D17 = P0_22 (A3) */
+			<&gpio0 15 GPIO_ACTIVE_HIGH>;  /* D18 = P0_15 (A4) */
 		builtin-led-gpios = <&gpio0 10 GPIO_ACTIVE_LOW>, <&gpio0 27 GPIO_ACTIVE_LOW>, <&gpio1 2 GPIO_ACTIVE_LOW>;
 
 		cdc-acm-serial = <&board_cdc_acm_uart>; /* 'Serial' object is managed by SerialUSB */
 		serials = <&flexcomm4_lpuart4>; /* 'Serial1' onwards */
 		i2cs = <&flexcomm2_lpi2c2>;
 		spis = <&flexcomm1_lpspi1>;
+
+		io-channels = <&lpadc0 2>, <&lpadc0 3>, <&lpadc0 4>, <&lpadc0 5>;
+		adc-pin-gpios = <&gpio0 14 0>, <&gpio0 22 0>, <&gpio0 15 0>, <&gpio0 23 0>;
 	};
 };
