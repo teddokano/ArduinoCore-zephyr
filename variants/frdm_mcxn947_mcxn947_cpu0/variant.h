@@ -5,12 +5,12 @@
  */
 
 // TODO: correctly handle these legacy defines
-#define MOSI    0
-#define MISO    0
-#define SCK     0
-#define SS      0
-#define SDA     0
-#define SCL     0
+#define MOSI    11
+#define MISO    12
+#define SCK     13
+#define SS      10
+#define SDA     18
+#define SCL     19
 
 /*
  * A0/A1 have no GPIO capability on this board (pure analog pads), so they
